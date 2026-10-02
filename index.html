@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natalie International Trade</title>
+<meta name="description" content="[PLACEHOLDER: one-sentence description of the company for Google search results]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sea:#0e2f3f;--sea2:#14455a;--grain:#d9a23f;--kelp:#2f7a66;--salt:#f2f6f5;--ink:#10222b;--mute:#5b6f78;--line:#d5e0de;--bg:#ffffff}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1c25;--salt:#10262f;--ink:#e7efee;--mute:#9db1b8;--line:#22404c}}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:80px}
+body{font:17px/1.65 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--bg);padding-top:env(safe-area-inset-top,0)}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.1;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800}
+h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;margin-bottom:.6em}
+h3{font-size:1.25rem;font-weight:700;margin-bottom:.4em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:80px 0}
+.alt{background:var(--salt)}
+p+p{margin-top:1em}
+.lead{font-size:1.2rem;color:var(--mute);max-width:60ch}
+:focus-visible{outline:3px solid var(--grain);outline-offset:3px}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:var(--sea);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.15rem;line-height:1.05}
+.logo small{display:block;font:500 .7rem Figtree,sans-serif;letter-spacing:.14em;color:var(--grain)}
+nav{display:flex;gap:6px;align-items:center}
+nav a{text-decoration:none;padding:8px 14px;border-radius:99px;font-weight:500;font-size:.95rem;color:#cfe0e3}
+nav a:hover,nav a.on{background:rgba(255,255,255,.12);color:#fff}
+nav a.cta{background:var(--grain);color:var(--sea);font-weight:600}
+#burger{display:none;background:none;border:1px solid #ffffff55;color:#fff;border-radius:8px;padding:6px 12px;font:inherit}
+@media(max-width:820px){#burger{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--sea);flex-direction:column;align-items:stretch;padding:12px 24px 20px}nav.open{display:flex}}
+
+/* hero */
+.hero{background:var(--sea);color:#fff;padding:72px 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero p{color:#bcd2d6;font-size:1.2rem;max-width:46ch;margin:22px 0 30px}
+.hero h1 em{font-style:normal;color:var(--grain)}
+.btn{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:600;text-decoration:none;background:var(--grain);color:var(--sea);border:2px solid var(--grain);cursor:pointer;font-family:inherit;font-size:1rem}
+.btn.ghost{background:none;color:#fff;border-color:#ffffff66;margin-left:8px}
+.route{width:100%;height:auto}
+.route .arc{stroke-dasharray:6 7;animation:flow 2.5s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-26}}
+@media(prefers-reduced-motion:reduce){.route .arc{animation:none}}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}}
+.strip{background:var(--sea2);margin-top:56px;color:#fff}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;padding-top:22px;padding-bottom:22px;grid-template-columns:none}
+.strip b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;color:var(--grain);margin-right:8px}
+.strip span{color:#bcd2d6;font-size:.95rem}
+
+/* placeholders */
+.ph{background:repeating-linear-gradient(135deg,var(--salt) 0 14px,var(--line) 14px 15px);border:1.5px dashed var(--mute);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:var(--mute);font-size:.9rem;min-height:240px}
+.alt .ph{background:repeating-linear-gradient(135deg,var(--bg) 0 14px,var(--line) 14px 15px)}
+.ph.tall{min-height:380px}
+.ph.sq{aspect-ratio:1;min-height:0;border-radius:50%;width:150px;margin-bottom:16px}
+.txt{color:var(--mute)}
+.txt::before{content:"[";}.txt::after{content:"]";}
+
+/* layouts */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+@media(max-width:900px){.two,.three{grid-template-columns:1fr;gap:32px}.four{grid-template-columns:1fr 1fr}}
+.sol{border-top:4px solid var(--kelp);padding-top:18px}
+.sol:nth-child(2){border-color:var(--grain)}.sol:nth-child(3){border-color:var(--sea2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.chips span{border:1px solid var(--line);border-radius:99px;padding:6px 16px;font-size:.95rem;background:var(--bg)}
+.tl{border-left:3px solid var(--grain);padding-left:28px;display:grid;gap:30px;margin-top:10px}
+.tl b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;color:var(--kelp)}
+.page-head{background:var(--sea);color:#fff;padding:72px 0 64px}
+.page-head p{color:#bcd2d6;max-width:56ch;margin-top:16px;font-size:1.15rem}
+.quote{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;line-height:1.25;border-left:5px solid var(--grain);padding-left:24px}
+.team{text-align:center}.team .ph.sq{margin-inline:auto}
+.team h3{margin-bottom:0}
+
+/* contact */
+.cta-band{background:var(--kelp);color:#fff;text-align:center}
+.cta-band p{color:#dcefe9;max-width:50ch;margin:0 auto 26px}
+.cta-band .btn{background:#fff;border-color:#fff;color:var(--sea)}
+form{display:grid;gap:16px}
+label{font-weight:600;font-size:.92rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+.info{display:grid;gap:22px}.info div{border-left:4px solid var(--grain);padding-left:16px}
+.info b{display:block}
+footer{background:var(--sea);color:#bcd2d6;padding:48px 0 calc(32px + env(safe-area-inset-bottom,0));font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer a{display:block;text-decoration:none;padding:2px 0}footer a:hover{color:#fff}
+.page{display:none}.page.show{display:block}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#home" aria-label="Natalie International Trade, home">
+      <!-- LOGO PLACEHOLDER: replace this SVG with your real logo -->
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#d9a23f" stroke-width="2"/><path d="M10 28V12l20 16V12" fill="none" stroke="#fff" stroke-width="3.2" stroke-linejoin="round"/></svg>
+      <span>Natalie<small>INTERNATIONAL TRADE</small></span>
+    </a>
+    <button id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#story">Our Story</a>
+      <a href="#solutions">Our Solutions</a>
+      <a href="#team">Our Team</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ HOME ============ -->
+<div class="page" id="p-home">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Feed for animals, <em>moved</em> across borders.</h1>
+        <p class="txt-w">[PLACEHOLDER: One or two sentences. Who you supply, what you trade and where, e.g. "We source and ship animal feed and feed ingredients from trusted producers to buyers in X markets."]</p>
+        <a class="btn" href="#contact">Request a quote</a><a class="btn ghost" href="#solutions">See our solutions</a>
+      </div>
+      <svg class="route" viewBox="0 0 400 300" role="img" aria-label="Illustration of trade routes between ports">
+        <g fill="none" stroke="#2b6277" stroke-width="1"><circle cx="200" cy="150" r="140"/><circle cx="200" cy="150" r="95"/><ellipse cx="200" cy="150" rx="55" ry="140"/><ellipse cx="200" cy="150" rx="140" ry="55"/></g>
+        <g class="arc" fill="none" stroke="#d9a23f" stroke-width="2.4" stroke-linecap="round">
+          <path d="M70 190 Q130 60 230 100"/><path d="M230 100 Q320 90 340 170"/><path d="M70 190 Q200 280 340 170"/>
+        </g>
+        <g fill="#fff"><circle cx="70" cy="190" r="7"/><circle cx="230" cy="100" r="7"/><circle cx="340" cy="170" r="7"/></g>
+        <g fill="#d9a23f"><circle cx="70" cy="190" r="3"/><circle cx="230" cy="100" r="3"/><circle cx="340" cy="170" r="3"/></g>
+      </svg>
+    </div>
+    <div class="strip"><div class="wrap">
+      <div><b>[00]</b><span>[Countries served]</span></div>
+      <div><b>[00]</b><span>[Years in trade]</span></div>
+      <div><b>[000]</b><span>[Containers shipped yearly]</span></div>
+    </div></div>
+  </div>
+
+  <section><div class="wrap two">
+    <div>
+      <h2>Trade you can plan around</h2>
+      <p class="lead">[PLACEHOLDER: Short intro, 2 to 3 sentences about what makes Natalie International Trade a reliable partner: quality, consistency, delivery.]</p>
+      <div class="chips"><span>[Dog &amp; cat food]</span><span>[Poultry feed]</span><span>[Cattle feed]</span><span>[Raw ingredients]</span></div>
+    </div>
+    <div class="ph tall">[IMAGE: Warehouse, port or product photo, landscape or portrait]</div>
+  </div></section>
+
+  <section class="alt"><div class="wrap">
+    <h2>What we do for our partners</h2>
+    <div class="three">
+      <div class="sol"><h3>Sourcing</h3><p class="txt">Short description of how you find and vet producers.</p></div>
+      <div class="sol"><h3>Logistics</h3><p class="txt">Short description of shipping, containers, customs and documentation.</p></div>
+      <div class="sol"><h3>Supply &amp; support</h3><p class="txt">Short description of ongoing supply, pricing updates and service.</p></div>
+    </div>
+    <p style="margin-top:32px"><a class="btn" href="#solutions" style="background:var(--sea);border-color:var(--sea);color:#fff">Explore all solutions</a></p>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2>Certified and compliant</h2>
+    <p class="lead" style="margin-bottom:28px">[PLACEHOLDER: One line about quality standards and certifications.]</p>
+    <div class="four">
+      <div class="ph" style="min-height:110px">[Logo: certification 1]</div><div class="ph" style="min-height:110px">[Logo: certification 2]</div>
+      <div class="ph" style="min-height:110px">[Logo: certification 3]</div><div class="ph" style="min-height:110px">[Logo: certification 4]</div>
+    </div>
+  </div></section>
+
+  <section class="cta-band"><div class="wrap">
+    <h2>Looking for a supplier?</h2>
+    <p>[PLACEHOLDER: Short invitation to get in touch. Mention response time, e.g. "We reply within one business day."]</p>
+    <a class="btn" href="#contact">Request a quote</a>
+  </div></section>
+</div>
+
+<!-- ============ STORY ============ -->
+<div class="page" id="p-story">
+  <div class="page-head"><div class="wrap"><h1>Our Story</h1><p>[PLACEHOLDER: One-line summary of how and why the company began.]</p></div></div>
+  <section><div class="wrap two">
+    <div>
+      <h2>How it started</h2>
+      <p class="txt">Paragraph about the founding of Natalie International Trade: who started it, when, and what gap in the market they saw.</p>
+      <p class="txt">Paragraph about how the company grew: first markets, first partners, lessons learned.</p>
+    </div>
+    <div class="ph tall">[IMAGE: Founder, early days or company archive photo]</div>
+  </div></section>
+  <section class="alt"><div class="wrap">
+    <p class="quote">[PLACEHOLDER: A sentence that sums up your philosophy or mission.]</p>
+  </div></section>
+  <section><div class="wrap two">
+    <div class="ph tall">[IMAGE: Ships, containers, or operations]</div>
+    <div>
+      <h2>Milestones</h2>
+      <div class="tl">
+        <div><b>[Year]</b><p class="txt">Milestone: company founded.</p></div>
+        <div><b>[Year]</b><p class="txt">Milestone: first international market.</p></div>
+        <div><b>[Year]</b><p class="txt">Milestone: new certification, partnership or product line.</p></div>
+        <div><b>[Today]</b><p class="txt">Where the company is now.</p></div>
+      </div>
+    </div>
+  </div></section>
+  <section class="alt"><div class="wrap">
+    <h2>What we stand for</h2>
+    <div class="three">
+      <div class="sol"><h3>[Value 1]</h3><p class="txt">Short explanation, e.g. quality.</p></div>
+      <div class="sol"><h3>[Value 2]</h3><p class="txt">Short explanation, e.g. reliability.</p></div>
+      <div class="sol"><h3>[Value 3]</h3><p class="txt">Short explanation, e.g. transparency.</p></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ SOLUTIONS ============ -->
+<div class="page" id="p-solutions">
+  <div class="page-head"><div class="wrap"><h1>Our Solutions</h1><p>[PLACEHOLDER: One-line overview of the range of products and services.]</p></div></div>
+  <section><div class="wrap">
+    <h2>Products</h2>
+    <div class="three">
+      <div><div class="ph" style="min-height:200px;margin-bottom:16px">[IMAGE: Product category 1]</div><h3>[Pet food]</h3><p class="txt">Description, packaging options and typical order sizes.</p></div>
+      <div><div class="ph" style="min-height:200px;margin-bottom:16px">[IMAGE: Product category 2]</div><h3>[Livestock &amp; poultry feed]</h3><p class="txt">Description, packaging options and typical order sizes.</p></div>
+      <div><div class="ph" style="min-height:200px;margin-bottom:16px">[IMAGE: Product category 3]</div><h3>[Feed ingredients]</h3><p class="txt">Description, packaging options and typical order sizes.</p></div>
+    </div>
+  </div></section>
+  <section class="alt"><div class="wrap two">
+    <div>
+      <h2>Services</h2>
+      <p class="txt">Overview of what you handle beyond the product itself: sourcing, quality control, documentation, shipping, customs clearance, delivery terms (FOB, CIF and others).</p>
+      <div class="chips"><span>[Sourcing]</span><span>[Quality control]</span><span>[Shipping]</span><span>[Documentation]</span><span>[Customs]</span></div>
+    </div>
+    <div class="ph tall">[IMAGE: Port, container or logistics photo]</div>
+  </div></section>
+  <section><div class="wrap">
+    <h2>How an order works</h2>
+    <div class="four">
+      <div class="sol"><h3>1. Inquiry</h3><p class="txt">You tell us what you need.</p></div>
+      <div class="sol"><h3>2. Offer</h3><p class="txt">We send a quote with terms.</p></div>
+      <div class="sol"><h3>3. Shipment</h3><p class="txt">We arrange the logistics.</p></div>
+      <div class="sol"><h3>4. Delivery</h3><p class="txt">Goods arrive, support continues.</p></div>
+    </div>
+  </div></section>
+  <section class="cta-band"><div class="wrap">
+    <h2>Need something specific?</h2>
+    <p>[PLACEHOLDER: Invite buyers to send their requirements.]</p>
+    <a class="btn" href="#contact">Request a quote</a>
+  </div></section>
+</div>
+
+<!-- ============ TEAM ============ -->
+<div class="page" id="p-team">
+  <div class="page-head"><div class="wrap"><h1>Our Team</h1><p>[PLACEHOLDER: One line about the people behind the company.]</p></div></div>
+  <section><div class="wrap">
+    <div class="four team">
+      <div><div class="ph sq">[Photo]</div><h3>[Full name]</h3><p class="txt">Role, e.g. Founder &amp; CEO</p></div>
+      <div><div class="ph sq">[Photo]</div><h3>[Full name]</h3><p class="txt">Role</p></div>
+      <div><div class="ph sq">[Photo]</div><h3>[Full name]</h3><p class="txt">Role</p></div>
+      <div><div class="ph sq">[Photo]</div><h3>[Full name]</h3><p class="txt">Role</p></div>
+    </div>
+  </div></section>
+  <section class="alt"><div class="wrap two">
+    <div class="ph tall">[IMAGE: Team photo or office]</div>
+    <div>
+      <h2>How we work</h2>
+      <p class="txt">Paragraph about the team's experience, languages spoken, regions covered and working culture.</p>
+      <div class="chips"><span>[English]</span><span>[Hebrew]</span><span>[Other languages]</span></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" id="p-contact">
+  <div class="page-head"><div class="wrap"><h1>Contact</h1><p>[PLACEHOLDER: Short line, e.g. "Tell us what you need and we will reply within one business day."]</p></div></div>
+  <section><div class="wrap two" style="align-items:start">
+    <!-- To make the form work: create a free key at web3forms.com and replace YOUR_ACCESS_KEY -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New inquiry from the website">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <label>Full name<input name="name" required></label>
+        <label>Company<input name="company"></label>
+      </div>
+      <div class="row">
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone / WhatsApp<input type="tel" name="phone"></label>
+      </div>
+      <div class="row">
+        <label>Product of interest
+          <select name="product"><option>Pet food</option><option>Livestock &amp; poultry feed</option><option>Feed ingredients</option><option>Other</option></select></label>
+        <label>Destination country<input name="country"></label>
+      </div>
+      <div class="row">
+        <label>Estimated quantity<input name="quantity" placeholder="e.g. 2 containers / 50 tons"></label>
+        <label>How did you hear about us?<input name="source"></label>
+      </div>
+      <label>Message<textarea name="message" rows="5"></textarea></label>
+      <label style="font-weight:400;display:flex;gap:10px;align-items:flex-start"><input type="checkbox" required style="width:auto;margin-top:5px">I agree to be contacted about my inquiry. [Link to privacy policy]</label>
+      <button class="btn" type="submit">Send inquiry</button>
+    </form>
+    <div class="info">
+      <div><b>Email</b><span class="txt">info@yourdomain.com</span></div>
+      <div><b>Phone</b><span class="txt">+000 00 000 0000</span></div>
+      <div><b>WhatsApp</b><span class="txt">Chat link</span></div>
+      <div><b>Address</b><span class="txt">Street, City, Country</span></div>
+      <div><b>LinkedIn</b><span class="txt">Company page link</span></div>
+      <div class="ph" style="min-height:180px;border-left:1.5px dashed var(--mute)">[MAP: Embedded Google Map of the office]</div>
+    </div>
+  </div></section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem">Natalie International Trade</b><br>[Short tagline]<br><br>&copy; <span id="yr"></span> Natalie International Trade. All rights reserved.</div>
+    <div><a href="#home">Home</a><a href="#story">Our Story</a><a href="#solutions">Our Solutions</a><a href="#team">Our Team</a><a href="#contact">Contact</a></div>
+    <div><span class="txt">info@yourdomain.com</span><br><span class="txt">+000 00 000 0000</span><br><a href="#">[Privacy policy]</a></div>
+  </div>
+</footer>
+
+<!-- ANALYTICS PLACEHOLDER: paste the Cloudflare Web Analytics / Microsoft Clarity / GA4 snippets here, before </body> -->
+<script>
+(function(){
+  var pages=['home','story','solutions','team','contact'];
+  function show(h){
+    if(pages.indexOf(h)<0)h='home';
+    try{history.replaceState(null,'','#'+h)}catch(e){}
+    pages.forEach(function(p){document.getElementById('p-'+p).classList.toggle('show',p===h)});
+    document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h&&!a.classList.contains('cta'))});
+    document.title=(h==='home'?'':h.charAt(0).toUpperCase()+h.slice(1)+' | ')+'Natalie International Trade';
+    document.getElementById('nav').classList.remove('open');
+    document.getElementById('burger').setAttribute('aria-expanded','false');
+    window.scrollTo(0,0);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]'); if(!a)return;
+    var h=a.getAttribute('href').slice(1); if(pages.indexOf(h)<0)return;
+    e.preventDefault(); show(h);
+  });
+  window.addEventListener('hashchange',function(){show((location.hash||'#home').slice(1))});
+  var start='home'; try{start=(location.hash||'#home').slice(1)}catch(e){}
+  show(start);
+  document.getElementById('burger').onclick=function(){var o=document.getElementById('nav').classList.toggle('open');this.setAttribute('aria-expanded',o)};
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
